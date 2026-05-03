@@ -1,0 +1,85 @@
+╔════════════════════════════════════════════════════════════════════╗
+║           NSE INTRADAY SCANNER - QUICK START                       ║
+╚════════════════════════════════════════════════════════════════════╝
+
+✅ YOUR SCANNER IS READY!
+
+═══════════════════════════════════════════════════════════════════════
+
+📋 SETUP (One-time only):
+
+1. Install Python from: https://www.python.org/downloads/
+   ⚠️ Check "Add Python to PATH" during installation
+
+2. Open Command Prompt in this folder and run:
+   python -m pip install -r requirements.txt
+
+3. Done! You're ready to scan.
+
+═══════════════════════════════════════════════════════════════════════
+
+🚀 HOW TO RUN:
+
+METHOD 1: Double-click (Windows)
+   • run_scanner.bat          → Single scan
+   • run_live_monitor.bat     → Continuous monitoring
+
+METHOD 2: Command Line
+   • python intraday_scanner.py    → Single scan
+   • python live_monitor.py        → Continuous monitoring
+
+═══════════════════════════════════════════════════════════════════════
+
+⏰ BEST TIMES TO SCAN:
+
+   9:30 AM  → Opening breakouts & gap plays
+   11:00 AM → Mid-morning momentum
+   1:00 PM  → Post-lunch session
+   2:30 PM  → Last hour opportunities
+
+═══════════════════════════════════════════════════════════════════════
+
+📊 WHAT YOU'LL GET:
+
+✓ 5-10 high-quality intraday opportunities
+✓ Bullish or Bearish direction
+✓ Price, volume, VWAP, RSI data
+✓ Quality score (focus on 6+ scores)
+✓ CSV export with timestamp
+✓ Real-time data (15-min delay)
+
+═══════════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT TRADING RULES:
+
+   ✓ Always use stop-loss (1-2% from entry)
+   ✓ Risk only 1-2% per trade
+   ✓ Focus on Quality Score ≥ 6
+   ✓ Exit all positions by 3:15 PM
+   ✓ Paper trade first!
+
+   THIS IS NOT FINANCIAL ADVICE
+
+═══════════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION:
+
+   • README.md        → Full user guide
+   • SETUP_GUIDE.md   → Installation help
+
+═══════════════════════════════════════════════════════════════════════
+
+🎯 YOUR SYSTEM SCANS FOR:
+
+   ✓ High volume (>1.5x average)
+   ✓ Gap up/down (≥1.5%)
+   ✓ VWAP hold (critical!)
+   ✓ EMA trend alignment
+   ✓ RSI momentum (55-75 bull, 25-45 bear)
+   ✓ MACD crossovers
+   ✓ Breakout/breakdown setups
+   ✓ ATR expansion (volatility)
+
+═══════════════════════════════════════════════════════════════════════
+
+Happy Trading! 📈

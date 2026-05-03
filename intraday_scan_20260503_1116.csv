@@ -1,0 +1,27 @@
+Symbol,Direction,Price,Change%,Volume_Ratio,VWAP_Position,VWAP,Setup,RSI,Sector,Score,EMA20,EMA50,ATR%
+ICICIBANK,BEARISH,1263.4,-1.37,3.48,Below,1292.33,Volume Surge | EMA Aligned | RSI Momentum,39.2,Financial Services,5,1265.55,1266.63,0.2
+HINDUNILVR,BEARISH,2254.0,-2.61,2.17,Below,2298.69,Volume Surge | Gap Down | Below VWAP,51.7,Consumer Defensive,6,2254.21,2258.47,0.25
+KOTAKBANK,BULLISH,384.5,0.65,2.57,Above,380.66,Above VWAP | EMA Aligned | RSI Momentum,65.5,Financial Services,6,382.56,381.87,0.33
+LT,BEARISH,4014.0,-2.0,3.23,Below,4055.23,Volume Surge | Gap Down | Below VWAP,53.0,Industrials,6,4015.42,4016.91,0.22
+AXISBANK,BEARISH,1275.5,-1.61,2.94,Below,1289.19,EMA Aligned | RSI Momentum | Volume Surge,60.6,Financial Services,5,1270.7,1270.14,0.26
+SUNPHARMA,BULLISH,1814.3,2.0,10.15,Above,1744.74,Gap Up | EMA Aligned | Breakout,76.5,Healthcare,5,1805.36,1796.21,0.17
+BAJFINANCE,BEARISH,937.0,0.75,2.2,Below,938.65,Breakout | Volume Surge | Below VWAP,36.7,Financial Services,5,940.06,942.66,0.27
+WIPRO,BEARISH,201.05,0.18,5.64,Below,202.97,Volume Surge | Below VWAP | EMA Aligned,38.0,Technology,5,201.22,201.33,0.17
+NESTLEIND,BULLISH,1458.6,-0.48,4.04,Above,1444.31,Above VWAP | EMA Aligned | RSI Momentum,59.7,Consumer Defensive,6,1456.34,1454.72,0.23
+ONGC,BULLISH,299.0,-0.8,5.72,Above,298.51,Above VWAP | RSI Momentum | Breakout,56.0,Energy,5,299.16,299.55,0.23
+BAJAJFINSV,BEARISH,1740.0,-1.37,2.77,Below,1767.94,Volume Surge | Below VWAP | EMA Aligned,39.8,Financial Services,5,1748.65,1754.49,0.47
+ADANIPORTS,BULLISH,1657.3,-0.23,2.6,Above,1637.63,Above VWAP | EMA Aligned | Breakout,77.5,Industrials,5,1638.6,1633.63,0.66
+TATASTEEL,BEARISH,211.15,-2.19,4.62,Below,214.32,RSI Momentum | Volume Surge | Gap Down,57.5,Basic Materials,5,211.25,211.39,0.19
+HINDALCO,BEARISH,1038.0,-2.74,4.22,Below,1062.56,Volume Surge | Gap Down | EMA Aligned,34.4,Basic Materials,6,1042.74,1045.8,0.34
+JSWSTEEL,BEARISH,1260.1,-1.53,4.54,Below,1280.46,Volume Surge | Gap Down | Below VWAP,51.2,Basic Materials,5,1263.22,1262.13,0.22
+TATACONSUM,BEARISH,1147.7,-1.74,3.3,Below,1156.04,Volume Surge | Gap Down | Below VWAP,54.5,Consumer Defensive,5,1145.98,1147.2,0.21
+ADANIENT,BULLISH,2412.0,-0.57,3.0,Above,2393.08,Above VWAP | EMA Aligned | Breakout,77.3,Energy,5,2398.27,2389.39,0.32
+GODREJCP,BEARISH,1069.9,-1.85,2.2,Below,1082.01,EMA Aligned | RSI Momentum | Volume Surge,57.9,Consumer Defensive,5,1068.59,1068.05,0.33
+HDFCLIFE,BEARISH,587.25,-1.2,3.55,Below,593.9,EMA Aligned | Volume Surge | Below VWAP,39.4,Financial Services,5,587.14,586.41,0.2
+DABUR,BEARISH,442.55,-2.95,2.32,Below,450.11,Volume Surge | Gap Down | Below VWAP,51.0,Consumer Defensive,5,442.49,443.59,0.2
+AMBUJACEM,BEARISH,444.2,-2.29,3.4,Below,455.26,Volume Surge | Gap Down | EMA Aligned,50.3,Basic Materials,5,444.88,444.9,0.24
+GAIL,BEARISH,163.0,-1.61,5.07,Below,165.34,EMA Aligned | Volume Surge | Gap Down,53.4,Utilities,5,163.0,162.88,0.19
+BANKBARODA,BEARISH,264.11,-1.54,3.15,Below,267.82,EMA Aligned | RSI Momentum | Volume Surge,68.3,Financial Services,5,263.41,263.29,0.24
+SAIL,BULLISH,184.62,-0.83,3.89,Above,184.5,Above VWAP | EMA Aligned | RSI Momentum,58.3,Basic Materials,5,184.34,183.93,0.32
+NMDC,BEARISH,90.35,-1.5,4.83,Below,90.97,Volume Surge | Gap Down | Below VWAP,50.9,Basic Materials,5,90.47,90.47,0.25
+BHEL,BULLISH,352.45,2.31,3.62,Above,349.48,Gap Up | Above VWAP | EMA Aligned,69.2,Industrials,6,351.3,349.23,0.39
