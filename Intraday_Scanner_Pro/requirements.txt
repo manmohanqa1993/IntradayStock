@@ -1,0 +1,35 @@
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# FREE Data Sources (No API keys needed!)
+yfinance>=0.2.28  # Yahoo Finance - 5-min candles
+nsepy>=0.8  # NSE India Official Data
+
+# Broker APIs (install based on your broker)
+kiteconnect>=4.1.0  # For Zerodha
+smartapi-python>=1.3.0  # For Angel One
+upstox-python-sdk>=2.6.0  # For Upstox
+fyers-apiv3>=3.0.0  # For Fyers
+
+# Technical analysis
+ta>=0.11.0
+pandas-ta>=0.3.14b
+
+# Alerts
+python-telegram-bot>=20.0
+
+# Utilities
+pytz>=2023.3
+python-dateutil>=2.8.2
+
+# Optional - for dashboard
+dash>=2.14.0
+plotly>=5.17.0
+
+# Optional - for backtesting
+backtrader>=1.9.78.123
+
+# Optional - for sound alerts on Windows
+# winsound (built-in for Windows)

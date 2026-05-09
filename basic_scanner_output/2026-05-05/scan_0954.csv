@@ -1,0 +1,5 @@
+Symbol,Direction,Entry,StopLoss,Target,Risk,RR_Ratio,Price,Change%,Volume_Ratio,VWAP_Position,VWAP,Setup,RSI,Sector,Quality_Score,Rating,Reasons,EMA20,EMA50,ATR%
+KPITTECH,BULLISH,780.7,727.75,886.6,52.95,2.0,780.7,1.58,2.18,Above,759.03,Above VWAP | EMA Bullish | RSI Momentum,72.6,Technology,7.8,⭐⭐ VERY GOOD,Above VWAP | EMA Aligned | RSI 72.6 | Strong MACD | OR Breakout,772.91,769.9,0.54
+HAL,BULLISH,4639.2,4289.5,5338.6,349.7,2.0,4639.2,1.75,1.78,Above,4485.55,Above VWAP | EMA Bullish | RSI Momentum,73.8,Industrials,7.5,⭐⭐ VERY GOOD,Above VWAP | EMA Aligned | RSI 73.8 | Strong MACD | OR Breakout,4600.39,4569.57,0.48
+DABUR,BULLISH,453.05,440.4,478.35,12.65,2.0,453.05,1.66,2.46,Above,448.9,Above VWAP | EMA Bullish | RSI Momentum,73.7,Consumer Defensive,7.2,⭐⭐ VERY GOOD,Strong VWAP Support | EMA Aligned | RSI 73.7 | Strong MACD | Strong Volume,449.41,447.87,0.39
+BAJFINANCE,BEARISH,935.9,975.0,857.7,39.1,2.0,935.9,-1.5,3.64,Below,947.89,Below VWAP | EMA Bearish | RSI Weakness,25.0,Financial Services,7.0,⭐⭐ VERY GOOD,Below VWAP | EMA Aligned | RSI 25.0 | Strong MACD- | Huge Volume,942.8,947.04,0.38

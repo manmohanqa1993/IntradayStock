@@ -1,0 +1,218 @@
+================================================================================
+  AVAILABLE NSE INTRADAY SCANNERS
+================================================================================
+
+Project: NSE F&O Stock Scanner
+Stocks:  209 F&O stocks
+Filters: Professional trader criteria
+Output:  3-5 premium setups with Entry/Stop/Target
+
+================================================================================
+  3 WORKING SCANNERS
+================================================================================
+
+1️⃣  KITE SCANNER (Zerodha) ⚡ REAL-TIME
+    ─────────────────────────────────────
+    File:   intraday_scanner_kite.py
+    Run:    run_kite_scanner.bat
+    Data:   Real-time (ZERO delay)
+    Needs:  Zerodha account + API setup
+    Best:   Day trading, scalping
+
+    Features:
+    ✅ Zero delay data
+    ✅ Live BID/ASK prices
+    ✅ Perfect for quick entries
+    ✅ 3-5 premium setups
+    ❌ Requires daily token generation
+
+
+2️⃣  PROFESSIONAL SCANNER 🎯 RECOMMENDED
+    ─────────────────────────────────────
+    File:   intraday_scanner_pro.py
+    Run:    run_pro_scanner.bat
+    Data:   Yahoo Finance (15-min delay)
+    Needs:  Nothing - just run!
+    Best:   Swing trading, beginners
+
+    Features:
+    ✅ No setup required
+    ✅ Free for everyone
+    ✅ Professional filters
+    ✅ 3-5 best setups only
+    ❌ 15-minute data delay
+
+
+3️⃣  BASIC SCANNER 📊 BEGINNER-FRIENDLY
+    ─────────────────────────────────────
+    File:   intraday_scanner.py
+    Run:    run_scanner.bat
+    Data:   Yahoo Finance (15-min delay)
+    Needs:  Nothing - just run!
+    Best:   Learning, seeing more options
+
+    Features:
+    ✅ Easy to understand
+    ✅ Shows top 10 stocks
+    ✅ Less strict filters
+    ✅ Good for learning
+    ❌ 15-minute data delay
+
+
+4️⃣  LIVE MONITOR 🔄 AUTO-SCAN
+    ─────────────────────────────────────
+    File:   live_monitor.py
+    Run:    run_live_monitor.bat
+    Does:   Scans every 15 minutes all day
+    Uses:   Basic scanner (Yahoo Finance)
+
+    Features:
+    ✅ Automatic scanning
+    ✅ Set and forget
+    ✅ Runs during market hours
+    ✅ Multiple scans per day
+
+================================================================================
+  QUICK COMPARISON
+================================================================================
+
+Feature           │ Kite    │ Pro     │ Basic   │ Monitor
+──────────────────┼─────────┼─────────┼─────────┼─────────
+Data Delay        │ 0 sec   │ 15 min  │ 15 min  │ 15 min
+Setup Required    │ Yes     │ No      │ No      │ No
+Broker Account    │ Zerodha │ None    │ None    │ None
+Results Count     │ 3-5     │ 3-5     │ 10      │ 10
+Filter Strictness │ Highest │ Highest │ Moderate│ Moderate
+Best For          │ Day     │ Swing   │ Learning│ Auto
+
+================================================================================
+  WHICH ONE SHOULD YOU USE?
+================================================================================
+
+For Day Trading:
+────────────────
+→ Use: Kite Scanner (run_kite_scanner.bat)
+→ Why: Real-time data essential for quick trades
+
+For Swing Trading:
+──────────────────
+→ Use: Professional Scanner (run_pro_scanner.bat)
+→ Why: 15-min delay doesn't affect swing positions
+
+For Learning:
+─────────────
+→ Use: Basic Scanner (run_scanner.bat)
+→ Why: Shows more results, easier to understand
+
+For Auto-Monitoring:
+────────────────────
+→ Use: Live Monitor (run_live_monitor.bat)
+→ Why: Scans automatically every 15 minutes
+
+================================================================================
+  INSTALLATION
+================================================================================
+
+First Time Only:
+────────────────
+Double-click: install_requirements.bat
+
+This installs:
+• yfinance (Yahoo Finance data)
+• pandas (Data analysis)
+• numpy (Calculations)
+• kiteconnect (For Kite scanner only)
+
+Time: 3-5 minutes
+
+================================================================================
+  HOW TO RUN
+================================================================================
+
+Option 1: Professional Scanner (Easiest)
+─────────────────────────────────────────
+1. Double-click: run_pro_scanner.bat
+2. Wait 5-8 minutes
+3. Get 3-5 premium setups!
+
+Option 2: Kite Scanner (Best for day trading)
+──────────────────────────────────────────────
+1. Setup Kite API (one-time, see KITE_SETUP_GUIDE.md)
+2. Generate token (daily)
+3. Double-click: run_kite_scanner.bat
+4. Get real-time setups!
+
+Option 3: Basic Scanner (More results)
+───────────────────────────────────────
+1. Double-click: run_scanner.bat
+2. Wait 5-8 minutes
+3. Get top 10 setups!
+
+Option 4: Live Monitor (Automatic)
+───────────────────────────────────
+1. Double-click: run_live_monitor.bat
+2. Runs every 15 minutes automatically
+3. Press Ctrl+C to stop
+
+================================================================================
+  OUTPUT LOCATION
+================================================================================
+
+All results saved in date-organized folders:
+
+kite_scanner_output/
+├── 2026-05-05/
+│   ├── scan_0945.csv
+│   ├── scan_1030.csv
+│   └── scan_1400.csv
+
+pro_scanner_output/
+├── 2026-05-05/
+│   └── scan_0945.csv
+
+basic_scanner_output/
+├── 2026-05-05/
+│   └── scan_0945.csv
+
+================================================================================
+  FILTERS APPLIED (All Scanners)
+================================================================================
+
+✅ Price >₹100
+✅ Movement: 1.5% to 2% (no excessive gaps)
+✅ Volume: 2× average, >500K shares
+✅ VWAP alignment (above for BUY, below for SELL)
+✅ EMA trend (20>50 bullish, 20<50 bearish)
+✅ RSI ranges (50-70 buy, 30-50 sell)
+✅ Breakout/breakdown confirmation
+✅ ATR >1% OR range >1.5%
+✅ Entry/Stop/Target with 1:2 R:R minimum
+
+================================================================================
+  NEED HELP?
+================================================================================
+
+📖 Documentation:
+   • SCANNER_COMPARISON.md    - Compare all scanners
+   • QUICK_START.md           - Get running in 10 minutes
+   • KITE_SETUP_GUIDE.md      - Setup Kite scanner
+   • PRO_SCANNER_GUIDE.md     - Professional scanner guide
+   • TROUBLESHOOTING_GUIDE.md - Fix common issues
+
+🆘 Common Issues:
+   • Python not found      → Install Python 3.8+
+   • Packages not found    → Run install_requirements.bat
+   • Kite token expired    → Generate fresh token daily
+   • No setups found       → Market may not have qualifying stocks
+
+================================================================================
+  BEST TIMES TO RUN
+================================================================================
+
+⏰ 9:45 AM  - Opening range setups
+⏰ 10:30 AM - Trend confirmation
+⏰ 2:00 PM  - Afternoon momentum
+
+================================================================================
+
+Choose your scanner and start trading! 🚀📈

@@ -1,0 +1,46 @@
+2026-05-08 19:59:13,072 - __main__ - INFO - ================================================================================
+2026-05-08 19:59:13,072 - __main__ - INFO - Best Intraday Stock Finder v1.0
+2026-05-08 19:59:13,072 - __main__ - INFO - ================================================================================
+2026-05-08 19:59:13,072 - data_handler - INFO - Initialized Zerodha Kite adapter
+2026-05-08 19:59:13,072 - strategy_validator - INFO - Initialized Momentum Continuation Strategy
+2026-05-08 19:59:13,073 - data_handler - INFO - Loaded 133 F&O stocks from file
+2026-05-08 19:59:13,074 - __main__ - INFO - Loaded 133 F&O stocks
+2026-05-08 19:59:13,074 - __main__ - INFO - Starting screener...
+2026-05-08 19:59:13,076 - data_handler - ERROR - KiteConnect library not installed. Run: pip install kiteconnect
+2026-05-08 19:59:13,076 - __main__ - ERROR - Failed to connect to broker. Please check credentials.
+2026-05-08 20:04:40,625 - __main__ - INFO - ================================================================================
+2026-05-08 20:04:40,625 - __main__ - INFO - Best Intraday Stock Finder v1.0
+2026-05-08 20:04:40,626 - __main__ - INFO - ================================================================================
+2026-05-08 20:04:40,626 - data_handler - INFO - Initialized Yahoo Finance (FREE) adapter
+2026-05-08 20:04:40,626 - strategy_validator - INFO - Initialized Momentum Continuation Strategy
+2026-05-08 20:04:40,627 - data_handler - INFO - Loaded 133 F&O stocks from file
+2026-05-08 20:04:40,628 - __main__ - INFO - Loaded 133 F&O stocks
+2026-05-08 20:04:40,628 - __main__ - INFO - Starting screener...
+2026-05-08 20:04:40,701 - __main__ - WARNING - Market is currently closed
+2026-05-08 20:04:50,799 - __main__ - INFO - ================================================================================
+2026-05-08 20:04:50,801 - __main__ - INFO - ================================================================================
+2026-05-08 20:04:50,801 - __main__ - INFO - Market closed. Stopping scanner.
+2026-05-08 20:04:50,801 - __main__ - INFO - Stopping screener...
+2026-05-08 20:13:01,468 - __main__ - INFO - ================================================================================
+2026-05-08 20:13:01,468 - __main__ - INFO - Best Intraday Stock Finder v1.0
+2026-05-08 20:13:01,469 - __main__ - INFO - ================================================================================
+2026-05-08 20:13:01,469 - data_handler - INFO - Initialized Hybrid NSE+Yahoo (BEST FREE) adapter
+2026-05-08 20:13:01,469 - strategy_validator - INFO - Initialized Momentum Continuation Strategy
+2026-05-08 20:13:01,491 - data_handler - INFO - Loaded 133 F&O stocks from file
+2026-05-08 20:13:01,491 - __main__ - INFO - Loaded 133 F&O stocks
+2026-05-08 20:13:01,492 - __main__ - INFO - Starting screener...
+2026-05-08 20:13:01,562 - data_handler - ERROR - nsepy not installed. Run: pip install nsepy
+2026-05-08 20:13:01,566 - __main__ - WARNING - Market is currently closed
+2026-05-08 23:31:01,131 - __main__ - INFO - ================================================================================
+2026-05-08 23:31:01,131 - __main__ - INFO - Best Intraday Stock Finder v1.0
+2026-05-08 23:31:01,131 - __main__ - INFO - ================================================================================
+2026-05-08 23:31:01,131 - data_handler - INFO - Initialized Hybrid NSE+Yahoo (BEST FREE) adapter
+2026-05-08 23:31:01,131 - strategy_validator - INFO - Initialized Momentum Continuation Strategy
+2026-05-08 23:31:01,153 - data_handler - INFO - Loaded 133 F&O stocks from file
+2026-05-08 23:31:01,153 - __main__ - INFO - Loaded 133 F&O stocks
+2026-05-08 23:31:01,153 - __main__ - INFO - Starting screener...
+2026-05-08 23:31:01,256 - __main__ - WARNING - Market is currently closed
+2026-05-08 23:31:11,763 - __main__ - INFO - ================================================================================
+2026-05-08 23:31:11,766 - __main__ - INFO - ================================================================================
+2026-05-08 23:31:11,766 - __main__ - INFO - Market closed. Stopping scanner.
+2026-05-08 23:31:11,766 - __main__ - INFO - Stopping screener...

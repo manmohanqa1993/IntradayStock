@@ -1,0 +1,6 @@
+Symbol,Direction,Entry,StopLoss,Target,Risk,RR_Ratio,Price,Change%,Volume_Ratio,VWAP_Position,VWAP,Setup,RSI,Sector,Quality_Score,Rating,Reasons,EMA20,EMA50,ATR%
+PIDILITIND,BULLISH,1446.0,1348.6,1640.8,97.4,2.0,1446.0,1.72,2.86,Above,1405.13,Above VWAP | EMA Bullish | RSI Momentum,68.3,Basic Materials,8.5,⭐⭐⭐ EXCELLENT,Above VWAP | EMA Aligned | Optimal RSI (68.3) | Strong MACD | OR Breakout,1442.17,1439.01,0.17
+LODHA,BULLISH,964.95,901.0,1092.85,63.95,2.0,964.95,1.66,3.84,Above,927.73,Above VWAP | EMA Bullish | RSI Momentum,74.3,Real Estate,8.0,⭐⭐ VERY GOOD,Above VWAP | EMA Aligned | RSI 74.3 | Strong MACD | OR Breakout,958.57,952.65,0.27
+SRF,BULLISH,2770.9,2495.2,3322.3,275.7,2.0,2770.9,1.89,4.62,Above,2670.44,Above VWAP | EMA Bullish | RSI Momentum,59.2,Industrials,8.0,⭐⭐ VERY GOOD,Above VWAP | EMA Aligned | RSI 59.2 | Strong MACD | OR Breakout,2765.72,2754.77,0.21
+ANGELONE,BULLISH,322.1,303.95,358.4,18.15,2.0,322.1,1.66,3.69,Above,314.58,Above VWAP | RSI Momentum | Breakout,62.6,Financial Services,6.0,⭐ GOOD,Above VWAP | Optimal RSI (62.6) | OR Breakout | Huge Volume | Near Day High,322.25,320.69,0.32
+PGEL,BEARISH,534.7,549.75,504.6,15.05,2.0,534.7,-1.8,2.64,Below,537.06,Below VWAP | EMA Bearish | RSI Weakness,31.0,Technology,7.5,⭐⭐ VERY GOOD,Strong VWAP Resistance | EMA Aligned | Optimal RSI (31.0) | MACD- | Huge Volume,536.87,537.22,0.19

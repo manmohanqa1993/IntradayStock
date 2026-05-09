@@ -1,6 +1,7 @@
 """
-Professional NSE Intraday Scanner
-Identifies 3-5 high-probability intraday trading opportunities with entry/stop/target levels
+Professional NSE Intraday Scanner with Quality Rating System
+Identifies TOP 3 Bullish + TOP 3 Bearish high-probability opportunities
+Features: Entry/Stop/Target levels, Quality Rating (1-12 scale), Nifty Trend Analysis
 Based on professional trader criteria
 """
 
@@ -8,6 +9,7 @@ import yfinance as yf
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+import os
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -65,6 +67,17 @@ def calculate_atr(df, period=14):
     true_range = np.max(ranges, axis=1)
     atr = true_range.rolling(period).mean()
     return atr
+
+def get_rating_label(score):
+    """Convert score to rating label (Score out of 12)"""
+    if score >= 10:
+        return "⭐⭐⭐ EXCELLENT"
+    elif score >= 8.5:
+        return "⭐⭐ VERY GOOD"
+    elif score >= 7.5:
+        return "⭐ GOOD"
+    else:
+        return "FAIR"
 
 def get_nifty_trend():
     """Analyze Nifty 50 trend to determine market direction"""
@@ -220,7 +233,11 @@ def analyze_stock_professional(symbol, nifty_trend):
     # Calculate metrics
     pct_change = ((current_price - prev_close) / prev_close) * 100
 
-    # FILTER 2: Momentum - Must be moving ±1.5%
+    # FILTER 2A: Remove stocks with >2% gap (too much gap up/down)
+    if abs(pct_change) > 2.0:
+        return None
+
+    # FILTER 2B: Momentum - Must be moving ±1.5%
     if abs(pct_change) < 1.5:
         return None
 
@@ -427,6 +444,7 @@ def analyze_stock_professional(symbol, nifty_trend):
         'VWAP': round(vwap, 2),
         'RSI': round(rsi, 1),
         'Score': score,
+        'Rating': get_rating_label(score),
         'Sector': sector,
         'Reasons': reasons,
         'Day_High': round(day_high, 2),
@@ -444,14 +462,18 @@ def scan_market_professional():
     nifty_trend = get_nifty_trend()
 
     if nifty_trend == "BULLISH":
-        print(f"✅ Nifty Trend: 🟢 BULLISH (Prefer LONG trades)\n")
+        print(f"✅ Nifty Trend: 🟢 BULLISH (Prefer LONG trades)")
+        print(f"💡 Recommendation: Focus on BULLISH setups for better probability\n")
     elif nifty_trend == "BEARISH":
-        print(f"✅ Nifty Trend: 🔴 BEARISH (Prefer SHORT trades)\n")
+        print(f"✅ Nifty Trend: 🔴 BEARISH (Prefer SHORT trades)")
+        print(f"💡 Recommendation: Focus on BEARISH setups for better probability\n")
     else:
-        print(f"⚠️  Nifty Trend: ⚪ NEUTRAL (Trade with caution)\n")
+        print(f"⚠️  Nifty Trend: ⚪ NEUTRAL (Trade with caution)")
+        print(f"💡 Recommendation: Trade both sides carefully, no clear market bias\n")
 
     print(f"Scanning {len(NSE_LIQUID_STOCKS)} F&O stocks...")
-    print("Applying professional trader criteria...\n")
+    print("Applying professional trader criteria...")
+    print("Target: TOP 3 Bullish + TOP 3 Bearish high-quality setups\n")
 
     opportunities = []
     processed = 0
@@ -479,27 +501,21 @@ def scan_market_professional():
     buy_setups.sort(key=lambda x: x['Score'], reverse=True)
     sell_setups.sort(key=lambda x: x['Score'], reverse=True)
 
-    # Limit to top 3-5 total (best quality only)
-    buy_setups = buy_setups[:3]
-    sell_setups = sell_setups[:3]
-    total_setups = buy_setups + sell_setups
-    total_setups.sort(key=lambda x: x['Score'], reverse=True)
-    total_setups = total_setups[:5]  # Maximum 5 total
+    # Limit to TOP 3 each direction
+    final_buy = buy_setups[:3]
+    final_sell = sell_setups[:3]
+    total_setups = final_buy + final_sell
 
-    # Re-separate for display
-    final_buy = [s for s in total_setups if s['Action'] == 'BUY']
-    final_sell = [s for s in total_setups if s['Action'] == 'SELL']
-
-    print(f"✅ Found {len(total_setups)} PREMIUM High-Probability Setups\n")
+    print(f"✅ Found TOP {len(final_buy)} Bullish + TOP {len(final_sell)} Bearish High-Quality Setups\n")
 
     # ==================== BUY SETUPS ====================
     if final_buy:
         print("="*120)
-        print(f"🟢 BUY OPPORTUNITIES ({len(final_buy)} setups)")
+        print(f"🟢 TOP 3 BULLISH OPPORTUNITIES")
         print("="*120)
 
         for i, trade in enumerate(final_buy, 1):
-            print(f"\n{i}. 🎯 {trade['Symbol']} - BUY SETUP")
+            print(f"\n{i}. 🎯 {trade['Symbol']} - {trade['Rating']}")
             print(f"   {'─'*115}")
             print(f"   📈 ENTRY:     ₹{trade['Entry']}")
             print(f"   🛑 STOP LOSS: ₹{trade['StopLoss']} (Risk: ₹{trade['Risk']})")
@@ -508,12 +524,14 @@ def scan_market_professional():
             print(f"   {'─'*115}")
             print(f"   📊 Current: ₹{trade['Current_Price']} | Change: {trade['Change%']:+.2f}% | Vol: {trade['Volume_Ratio']:.1f}x")
             print(f"   📉 VWAP: ₹{trade['VWAP']} | RSI: {trade['RSI']} | Day Range: ₹{trade['Day_Low']}-₹{trade['Day_High']}")
-            print(f"   🏢 Sector: {trade['Sector']} | Quality Score: {trade['Score']}/12 ⭐")
+            print(f"   🏆 Quality Score: {trade['Score']}/12 | 🏢 Sector: {trade['Sector']}")
             print(f"\n   ✅ REASONS FOR TRADE:")
             for reason in trade['Reasons']:
                 print(f"      {reason}")
 
         print("\n" + "="*120)
+    else:
+        print("\n🟢 No high-quality bullish setups found at this time.\n")
 
     if final_buy and final_sell:
         print("\n")
@@ -521,11 +539,11 @@ def scan_market_professional():
     # ==================== SELL SETUPS ====================
     if final_sell:
         print("="*120)
-        print(f"🔴 SELL OPPORTUNITIES ({len(final_sell)} setups)")
+        print(f"🔴 TOP 3 BEARISH OPPORTUNITIES")
         print("="*120)
 
         for i, trade in enumerate(final_sell, 1):
-            print(f"\n{i}. 🎯 {trade['Symbol']} - SELL SETUP")
+            print(f"\n{i}. 🎯 {trade['Symbol']} - {trade['Rating']}")
             print(f"   {'─'*115}")
             print(f"   📉 ENTRY:     ₹{trade['Entry']}")
             print(f"   🛑 STOP LOSS: ₹{trade['StopLoss']} (Risk: ₹{trade['Risk']})")
@@ -534,34 +552,54 @@ def scan_market_professional():
             print(f"   {'─'*115}")
             print(f"   📊 Current: ₹{trade['Current_Price']} | Change: {trade['Change%']:+.2f}% | Vol: {trade['Volume_Ratio']:.1f}x")
             print(f"   📈 VWAP: ₹{trade['VWAP']} | RSI: {trade['RSI']} | Day Range: ₹{trade['Day_Low']}-₹{trade['Day_High']}")
-            print(f"   🏢 Sector: {trade['Sector']} | Quality Score: {trade['Score']}/12 ⭐")
+            print(f"   🏆 Quality Score: {trade['Score']}/12 | 🏢 Sector: {trade['Sector']}")
             print(f"\n   ✅ REASONS FOR TRADE:")
             for reason in trade['Reasons']:
                 print(f"      {reason}")
 
         print("\n" + "="*120)
+    else:
+        print("\n🔴 No high-quality bearish setups found at this time.\n")
 
     print("\n")
+    print("="*120)
+    print("📊 QUALITY RATING SYSTEM")
+    print("="*120)
+    print("⭐⭐⭐ EXCELLENT  (10-12 points) - Highest probability setups, all criteria met")
+    print("⭐⭐ VERY GOOD    (8.5-9.9 points) - Strong setups, most criteria met")
+    print("⭐ GOOD          (7.5-8.4 points) - Good setups, minimum criteria met")
+    print("="*120)
+    print()
     print("="*120)
     print("⚠️  PROFESSIONAL TRADING RULES")
     print("="*120)
     print("1. ALWAYS use the stop loss mentioned - No exceptions!")
     print("2. Risk only 1-2% of capital per trade")
-    print("3. Wait for entry price or better - Don't chase")
-    print("4. Book partial profits at 1:1 and move SL to entry")
-    print("5. Exit if setup invalidates (breaks SL or key levels)")
-    print("6. These are high-probability setups, NOT guaranteed profits")
-    print("7. This is NOT financial advice - Trade at your own risk")
+    print("3. Prioritize EXCELLENT and VERY GOOD rated stocks")
+    print("4. Focus on setups aligned with Nifty trend (marked with ✅)")
+    print("5. Wait for entry price or better - Don't chase")
+    print("6. Book partial profits at 1:1 and move SL to entry")
+    print("7. Exit if setup invalidates (breaks SL or key levels)")
+    print("8. These are high-probability setups, NOT guaranteed profits")
+    print("9. This is NOT financial advice - Trade at your own risk")
     print("="*120 + "\n")
 
-    # Save to CSV
+    # Save to CSV in organized folder structure
     if total_setups:
         df_results = pd.DataFrame(total_setups)
         # Flatten reasons list to string
         df_results['Reasons'] = df_results['Reasons'].apply(lambda x: ' | '.join(x))
-        filename = f"pro_scan_{datetime.now().strftime('%Y%m%d_%H%M')}.csv"
-        df_results.to_csv(filename, index=False)
-        print(f"📊 Results saved to: {filename}\n")
+
+        # Create date-based folder structure
+        date_folder = datetime.now().strftime('%Y-%m-%d')
+        output_path = os.path.join('pro_scanner_output', date_folder)
+        os.makedirs(output_path, exist_ok=True)
+
+        # Save with time in filename
+        filename = f"scan_{datetime.now().strftime('%H%M')}.csv"
+        filepath = os.path.join(output_path, filename)
+        df_results.to_csv(filepath, index=False)
+        print(f"📊 Results saved to: {filepath}\n")
 
 if __name__ == "__main__":
     scan_market_professional()

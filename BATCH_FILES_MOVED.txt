@@ -1,0 +1,71 @@
+✅ BATCH FILES SUCCESSFULLY MOVED TO ROOT FOLDERS
+=================================================
+
+All .bat files are now in the root of each scanner folder for easier access!
+
+UPDATED STRUCTURE:
+-----------------
+
+Intraday_Scanner/
+├── run.bat          ← Double-click to start
+├── setup.bat        ← Double-click to install
+├── run.py
+├── requirements.txt
+├── src/
+├── config/
+├── docs/
+├── logs/
+└── output/
+
+Intraday_Scanner_Pro/
+├── run.bat          ← Double-click to start
+├── setup.bat        ← Double-click to install
+├── run.py
+├── requirements.txt
+├── src/
+├── config/
+├── docs/
+├── logs/
+└── output/
+
+Intraday_Scanner_Realtime/
+├── run.bat          ← Double-click to start
+├── setup.bat        ← Double-click to install
+├── run.py
+├── requirements.txt
+├── src/
+├── config/
+├── docs/
+├── logs/
+└── output/
+
+Intraday_Scanner_Kite/
+├── run.bat          ← Double-click to start
+├── setup.bat        ← Double-click to install
+├── login.bat        ← Daily Kite login
+├── run.py
+├── requirements.txt
+├── src/
+├── config/
+├── docs/
+├── logs/
+└── output/
+
+CHANGES MADE:
+------------
+✅ Removed batch/ subfolder from all scanners
+✅ Moved .bat files to root folder
+✅ Updated all .bat files (removed "cd ..")
+✅ Updated SCANNER_GUIDE.md
+✅ Updated command references
+
+HOW TO USE:
+----------
+1. Navigate to any scanner folder
+2. Double-click setup.bat (first time)
+3. Double-click run.bat (every time)
+4. For Kite: Double-click login.bat (daily)
+
+NO MORE TYPING "batch\"!
+
+All scanners ready to use with cleaner structure! 🚀

@@ -41,7 +41,6 @@ NSE_FNO_STOCKS = [
     'BAJAJ-AUTO.NS',    # Bajaj Auto
     'TATASTEEL.NS',     # Tata Steel
     'HINDZINC.NS',      # Hindustan Zinc
-    'ETERNALIT.NS',     # Eternal (IT Services)
     'ASIANPAINT.NS',    # Asian Paints
     'HINDALCO.NS',      # Hindalco Industries
     'SHRIRAMFIN.NS',    # Shriram Finance
@@ -83,8 +82,6 @@ NSE_FNO_STOCKS = [
     'MOTHERSON.NS',     # Samvardhana Motherson International
     'UNIONBANK.NS',     # Union Bank of India
     'HDFCLIFE.NS',      # HDFC Life Insurance
-    'LTIM.NS',          # LTIMindtree
-    'TATAMTRDVR.NS',    # Tata Motors DVR
     'PNB.NS',           # Punjab National Bank
     'JINDALSTEL.NS',    # Jindal Steel
     'BHEL.NS',          # Bharat Heavy Electricals
@@ -96,7 +93,6 @@ NSE_FNO_STOCKS = [
     'TATACONSUM.NS',    # Tata Consumer Products
     'IDEA.NS',          # Vodafone Idea
     'DRREDDY.NS',       # Dr Reddys Laboratories
-    'MAZAGON.NS',       # Mazagon Dock Shipbuilders
     'APOLLOHOSP.NS',    # Apollo Hospitals
     'AMBUJACEM.NS',     # Ambuja Cements
     'GODREJCP.NS',      # Godrej Consumer Products
@@ -107,11 +103,9 @@ NSE_FNO_STOCKS = [
     'CIPLA.NS',         # Cipla
     'LUPIN.NS',         # Lupin
     'HEROMOTOCO.NS',    # Hero Motocorp
-    'GMR.NS',           # GMR Airports (GMR Infra)
     'MARICO.NS',        # Marico
     'JSWENERGY.NS',     # JSW Energy
     'MAXHEALTH.NS',     # Max Healthcare Institute
-    'MCDOWELL-N.NS',    # United Spirits
     'ASHOKLEY.NS',      # Ashok Leyland
     'RECLTD.NS',        # REC
     'MANKIND.NS',       # Mankind Pharma
@@ -145,7 +139,6 @@ NSE_FNO_STOCKS = [
     'INDUSINDBK.NS',    # Indusind Bank
     'FEDERALBNK.NS',    # Federal Bank
     'PAYTM.NS',         # One 97 Communications (Paytm)
-    'L&TFH.NS',         # L&T Finance
     'FORTIS.NS',        # Fortis Healthcare
     'GLENMARK.NS',      # Glenmark Pharmaceuticals
     'DIXON.NS',         # Dixon Technologies
@@ -163,7 +156,6 @@ NSE_FNO_STOCKS = [
     'IDFCFIRSTB.NS',    # IDFC First Bank
     'LAURUSLABS.NS',    # Laurus Labs
     'BIOCON.NS',        # Biocon
-    'VLMM.NS',          # Vishal Mega Mart
     'TIINDIA.NS',       # Tube Investment
     'COLPAL.NS',        # Colgate Palmolive
     'GODREJPROP.NS',    # Godrej Properties
@@ -174,7 +166,6 @@ NSE_FNO_STOCKS = [
     'PATANJALI.NS',     # Patanjali Foods
     'MOTILALOFS.NS',    # Motilal Oswal Financial Services
     'VOLTAS.NS',        # Voltas
-    'KEIIND.NS',        # KEI Industries
     'PIIND.NS',         # PI Industries
     'PREMIERENE.NS',    # Premier Energies
     'SUPREMEIND.NS',    # Supreme Industries
@@ -212,7 +203,6 @@ NSE_FNO_STOCKS = [
     'CAMS.NS',          # CAMS
     'CROMPTON.NS',      # Crompton Greaves
     'INOXWIND.NS',      # Inox Wind
-    'SAMMAAN.NS',       # Sammaan Capital
     'KFINTECH.NS',      # KFin Technologies
     'PGEL.NS',          # PG Electroplast
     'IEX.NS',           # Indian Energy Exchange

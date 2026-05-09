@@ -1,0 +1,6 @@
+Symbol,Direction,Entry,StopLoss,Target,Risk,RR_Ratio,Price,Change%,Volume_Ratio,VWAP_Position,VWAP,Setup,RSI,Sector,Quality_Score,Rating,Reasons,EMA20,EMA50,ATR%
+AUBANK,BULLISH,1050.0,1002.0,1146.0,48.0,2.0,1050.0,1.7,4.17,Above,1024.77,Above VWAP | EMA Bullish | RSI Momentum,60.8,Financial Services,8.0,⭐⭐ VERY GOOD,Above VWAP | EMA Aligned | Optimal RSI (60.8) | MACD+ | OR Breakout,1046.85,1043.96,0.18
+ADANIPORTS,BULLISH,1762.7,1688.0,1912.1,74.7,2.0,1762.7,1.73,4.43,Above,1737.11,Above VWAP | EMA Bullish | RSI Momentum,59.1,Industrials,7.5,⭐⭐ VERY GOOD,Above VWAP | EMA Aligned | RSI 59.1 | MACD+ | OR Breakout,1761.19,1759.5,0.14
+CONCOR,BULLISH,534.8,510.35,583.7,24.45,2.0,534.8,1.54,2.99,Above,524.19,Above VWAP | EMA Bullish | Breakout,52.4,Industrials,6.0,⭐ GOOD,Above VWAP | EMA Aligned | MACD+ | OR Breakout | Huge Volume,533.63,533.0,0.19
+AXISBANK,BEARISH,1268.2,1307.8,1189.0,39.6,2.0,1268.2,-1.9,5.86,Below,1276.35,Below VWAP | EMA Bearish | Breakdown,46.8,Financial Services,6.0,⭐ GOOD,Strong VWAP Resistance | EMA Aligned | OR Breakdown | Huge Volume | Near Day Low,1268.34,1271.57,0.19
+BANKBARODA,BEARISH,265.75,271.7,253.85,5.95,2.0,265.75,-1.7,4.0,Below,267.12,Below VWAP | RSI Weakness | Breakdown,42.4,Financial Services,6.0,⭐ GOOD,Strong VWAP Resistance | RSI 42.4 | MACD- | OR Breakdown | Huge Volume,265.22,266.83,0.56
